@@ -8,6 +8,23 @@ public class Celebrity{
     private String weight;
     private String job;
     
+
+    public Celebrity(int age, String weight, String hairColor, String gender, String race, int height, String job){
+        this.age = age;
+        this.height = height;
+        this.hairColor = hairColor;
+        this.gender = gender;
+        this.race = race; 
+        this.weight = weight;
+        this.job = job;
+        
+
+
+
+    }
+    
+    
+    
     
     
     public int getAge(){
