@@ -24,41 +24,30 @@ public class Celebrity{
     }
     
     
-    
-    
-    
     public int getAge(){
-        return age;
+        return this.age;
     }
     
     
     public int getHeight(){
-        return height;
+        return this.height;
     }
     
     public String getHairColor(){
-        return hairColor;
+        return this.hairColor;
     }
     public String getGender(){
-        return gender;
+        return this.gender;
     }
     public String race(){
-        return race;
+        return this.race;
     }
     public String weight(){
-        return weight;
+        return this.weight;
     }
     public String getJob(){
-        return job;
+        return this.job;
     }
     
 
-    
-    
-    
-    public static void main(String[] args) throws Exception {
-       
-
-
-    }
 }
