@@ -3,138 +3,117 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Random;
 
-
 public class Game {
-   
-   public static void main(String[] args) {
-      
-   
 
-   List<Celebrity> ca;
-   ca = new ArrayList<Celebrity>();
-   celeb(ca);
-   Random g = new Random();
-   int randomNum = g.nextInt(ca.size());
-   Celebrity picked = ca.get (randomNum);   
-   boolean correctGuess = false;
-   while(correctGuess = false) {
-      Scanner guessReader = new Scanner(System.in);
-      System.out.println("Guess The Celebrity");
+    public static void main(String[] args) {
 
-      String guess = guessReader.nextLine();
-
-
-
-         if(guess.equals(picked.getName())) {
-               correctGuess = true;
-         }
-
-         else {
-            Scanner attributePicker = new Scanner(System.in);
-
-            System.out.print("Pick An Attribute! -" + "Age\nHeight\nHairColor\nGender\nRace\nWeight\nOcccupationProffesionJob");
-
+        List<Celebrity> ca;
+        ca = new ArrayList<Celebrity>();
+        celeb(ca);
+        Random g = new Random();
+        int randomNum = g.nextInt(ca.size());
+        Celebrity picked = ca.get(randomNum);
+        boolean correctGuess = false;
+        Scanner guessReader = new Scanner(System.in);
+        while (correctGuess == false) {
             
-         }
-      
-         
 
-         
-         
+            System.out.println("Guess The Celebrity");
 
-         
-         int attributePicker2 = attributePicker.nextInt();
-         if (attributePicker2 == "Age") {
-         System.out.println("Take A Guess!");
-         String attempt = guessReader.nextLine();
-         if (attempt.equals(chosen.getAge())) {
-             System.out.println("Correct");
-         }
-         else{
-                 System.out.println("Wrong");
-             }
-         }
-         
-         if (attributePicker2 == "Height") {
+            String guess = guessReader.nextLine();
 
-            System.out.println("Take A Guess!");
-         String attempt = s1.nextLine();
-         if (attempt.equals(chosen.getHeight())) {
-             System.out.println("Correct");
-         }
-         else{
-                 System.out.println("Wrong");
-             }
-         }
+            System.out.println (guess);
+            if (guess.equals(picked.getName())) {
+                System.out.println("guessed correctly");
 
-         if (attributePicker2 == "HairColor")
-         System.out.println("Take A Guess!");
-         String attempt = s1.nextLine();
-             if (attempt.equals(chosen.getHairColor())) {
-                 System.out.println("Correct");
-             }
-             else{
-                 System.out.println("Wrong");
-             }
-         }
-         if (attributePicker2 == "Gender") {
-         System.out.println("Take A Guess!");
-         int attempt = s1.nextInt();
-             if (attempt.equals(chosen.getGender())) {
-                 System.out.println("Correct");
-             }
-             else{
-                 System.out.println("Wrong");
-             }
-         }
-         if (attributePicker2 == "Race") {
-            System.out.println("Take A Guess!");
-            int attempt = s1.nextInt();
-                if (attempt.equals(chosen.getRace())) {
-                    System.out.println("Correct");
+                correctGuess = true;
+            }
+
+            else {
+                System.out.println("Pick An Attribute! -"
+                        + "Age\nHeight\nHairColor\nGender\nRace\nWeight\nOcccupationProffesionJob");
+
+                String attributePicker2 = guessReader.nextLine();
+                if (attributePicker2.equals("Age")) {
+                    System.out.println("Take A Guess!");
+                    String attempt = guessReader.nextLine();
+                    if (attempt.equals(picked.getAge())) {
+                        System.out.println("Correct");
+                    } else {
+                        System.out.println("Wrong");
+                    }
                 }
-                else{
-                    System.out.println("Wrong");
+
+                if (attributePicker2.equals("Height")) {
+
+                    System.out.println("Take A Guess!");
+                    String attempt = guessReader.nextLine();
+                    if (attempt.equals(picked.getHeight())) {
+                        System.out.println("Correct");
+                    } else {
+                        System.out.println("Wrong");
+                    }
                 }
-         }
-         if (attributePicker2 == "Weight") {
-            System.out.println("Take A Guess!");
-            int attempt = s1.nextInt();
-                  if (attempt.equals(chosen.getWeight())) {
-                       System.out.println("Correct");
-                   }
-                  else{
-                       System.out.println("Wrong");
-                   }
-         }
-         if (attributePicker2 == "OcccupationProffesionJob") {
-            System.out.println("Take A Guess!");
-            int attempt = s1.nextInt();
-                  if (attempt.equals(chosen.getJon())) {
-                       System.out.println("Correct");
-                   }
-                  else{
-                       System.out.println("Wrong");
-                   }
-         }
-   }  }                         
-   }
-   
-   public static void celeb(List<Celebrity> celebs) {
-   Celebrity LeBronJames = new Celebrity(38, "6ft9", "black", "male", "black", 250, "NBA"); 
-   Celebrity MarkWinchell = new Celebrity(1900, "4ft11", "grey", "male", "white", 50, "Admissions");
-   Celebrity JonahHill = new Celebrity(39, "5ft7", "brown", "male", "white", 192, "Actor");
-   celebs.add(0, LeBronJames);
-   celebs.add(1, MarkWinchell);
-   celebs.add(2, JonahHill);
-   }
+
+                if (attributePicker2.equals("HairColor")) {
+                    System.out.println("Take A Guess!");
+                    String attempt = guessReader.nextLine();
+                    if (attempt.equals(picked.getHairColor())) {
+                        System.out.println("Correct");
+                    } else {
+                        System.out.println("Wrong");
+                    }
+                }
+                if (attributePicker2.equals("Gender")) {
+                    System.out.println("Take A Guess!");
+                    String attempt = guessReader.nextLine();
+                    if (attempt.equals(picked.getGender())) {
+                        System.out.println("Correct");
+                    } else {
+                        System.out.println("Wrong");
+                    }
+                }
+                if (attributePicker2.equals("Race")) {
+                    System.out.println("Take A Guess!");
+                    String attempt = guessReader.nextLine();
+                    if (attempt.equals(picked.getRace())) {
+                        System.out.println("Correct");
+                    } else {
+                        System.out.println("Wrong");
+                    }
+                }
+                if (attributePicker2.equals("Weight")) {
+                    System.out.println("Take A Guess!");
+                    String attempt = guessReader.nextLine();
+                    if (attempt.equals(picked.getWeight())) {
+                        System.out.println("Correct");
+                    } else {
+                        System.out.println("Wrong");
+                    }
+                }
+                if (attributePicker2.equals("Job")) {
+                    System.out.println("Take A Guess!");
+                    String attempt = guessReader.nextLine();
+                    if (attempt.equals(picked.getJob())) {
+                        System.out.println("Correct");
+                    } else {
+                        System.out.println("Wrong");
+                    }
+
+                }
+            }
+
+        }
+        guessReader.close();
+    }
+
+
+    public static void celeb(List<Celebrity> celebs) {
+        Celebrity LeBronJames = new Celebrity("38", "250", "black", "male", "black", "6ft9", "NBA", "LeBron James");
+        Celebrity MarkWinchell = new Celebrity("1900", "50", "grey", "male", "white", "4ft11", "Admissions", "Mark Winchell");
+        Celebrity JonahHill = new Celebrity("39", "192", "brown", "male", "white", "5ft7", "Actor", "JonahHill");
+        celebs.add(0, LeBronJames);
+        celebs.add(1, MarkWinchell);
+        celebs.add(2, JonahHill);
+    }
 }
-    
-        
-    
-
-
-
-
-
-        

@@ -1,7 +1,8 @@
 public class Celebrity{
     
-    private int age;
-    private int height;
+    private String name;
+    private String age;
+    private String height;
     private String hairColor;
     private String gender;
     private String race;
@@ -9,7 +10,8 @@ public class Celebrity{
     private String job;
     
 
-    public Celebrity(int age, String weight, String hairColor, String gender, String race, int height, String job){
+    public Celebrity(String age, String weight, String hairColor, String gender, String race, String height, String job, String Name){
+        this.name = Name;
         this.age = age;
         this.height = height;
         this.hairColor = hairColor;
@@ -23,13 +25,13 @@ public class Celebrity{
 
     }
     
-    
-    public int getAge(){
+    public String getName(){
+        return this.name;
+    }
+    public String getAge(){
         return this.age;
     }
-    
-    
-    public int getHeight(){
+    public String getHeight(){
         return this.height;
     }
     
@@ -39,15 +41,18 @@ public class Celebrity{
     public String getGender(){
         return this.gender;
     }
-    public String race(){
+    public String getRace(){
         return this.race;
     }
-    public String weight(){
+    public String getWeight(){
         return this.weight;
     }
     public String getJob(){
         return this.job;
     }
+
+
+  
     
 
 }
